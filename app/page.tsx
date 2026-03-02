@@ -58,7 +58,8 @@ const ReusableContactForm = () => (
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 bg-white text-black font-medium rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -71,7 +72,8 @@ const ReusableContactForm = () => (
           id="phone"
           name="phone"
           required
-          className="w-full px-4 py-3 bg-white text-black font-medium rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -83,7 +85,8 @@ const ReusableContactForm = () => (
           type="date"
           id="date"
           name="date"
-          className="w-full px-4 py-3 bg-white text-black font-medium rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -94,7 +97,8 @@ const ReusableContactForm = () => (
         <select
           id="time"
           name="time"
-          className="w-full px-4 py-3 bg-white text-black font-medium rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
         >
           <option value="">시간 선택</option>
           <option value="10:00~11:00">10:00~11:00</option>
@@ -116,7 +120,8 @@ const ReusableContactForm = () => (
           type="text"
           id="message"
           name="message"
-          className="w-full px-4 py-3 bg-white text-black font-medium rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow placeholder-gray-400"
+          style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow placeholder-gray-400"
           placeholder="ex.회사보유분 로얄층 문의, 분양가"
         />
       </div>
@@ -318,12 +323,20 @@ export default function Home() {
             }
 
             // 일반 이미지 섹션
+            // SEO 최적화를 위한 alt 태그 처리 (id 기반 분기)
+            let altText = "울산 번영로 하늘채 라크뷰 분양 상세 이미지";
+            if (idx === 0) altText = "번영로 하늘채 라크뷰 조감도";
+            if (idx === 1) altText = "울산 번영로 하늘채 라크뷰 단지설계 및 스카이라운지";
+            if (idx === 2) altText = "번영로 하늘채 라크뷰 모델하우스 및 위치 안내";
+            if (idx === 4) altText = "울산 남구 아파트 번영로 하늘채 입지 프리미엄";
+            if (idx === 8) altText = "번영로 하늘채 라크뷰 광역교통망 및 환경";
+
             return (
               <div key={`block-${idx}`} className="w-full bg-white relative block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={block.src}
-                  alt={`상세 이미지 ${idx}`}
+                  alt={altText}
                   className="w-full h-auto block m-0 p-0 shadow-sm"
                   loading={idx > 4 ? "lazy" : "eager"}
                 />
