@@ -335,24 +335,7 @@ export default function Home() {
                   {/* 그라데이션 오버레이 (위/아래 어둡게) */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-10 pointer-events-none"></div>
 
-                  {/* 메인 타이포그래피 (페이드인 & 슬라이드업) */}
-                  <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 text-center mt-[-10vh]">
-                    <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-6 tracking-tight drop-shadow-2xl animate-in fade-in slide-in-from-bottom-10 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
-                      약 5천여세대 <span className="font-bold">新주거타운</span>의 시작!
-                    </h2>
-
-                    <div className="flex items-center justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 fill-mode-both" style={{ animationDelay: '600ms' }}>
-                      <span className="text-white/90 text-xl md:text-3xl font-light tracking-wide mr-2 drop-shadow-md">
-                        번영로 하늘채
-                      </span>
-                      <div className="border border-white/60 bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1 mx-1 shadow-[0_0_15px_rgba(255,255,255,0.2)] flex items-center">
-                        <span className="text-white text-2xl md:text-4xl font-[900] tracking-widest drop-shadow-lg leading-none pt-1">
-                          라크뷰
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
+                  {/* 텍스트는 이미지 자체에 있으므로 기존 타이포그래피 태그는 삭제, 배경 인터랙션 유지 */}
                   {/* 마우스 스크롤 유도 애니메이션 */}
                   <div className="absolute bottom-10 md:bottom-16 z-20 flex flex-col items-center opacity-80 animate-in fade-in duration-1000 delay-1000 fill-mode-both">
                     <span className="text-white/70 text-[10px] md:text-xs mb-2 tracking-widest uppercase font-mono animate-pulse">Scroll Down</span>
@@ -400,7 +383,7 @@ export default function Home() {
             if (idx === 8) altText = "번영로 하늘채 라크뷰 광역교통망 및 환경";
 
             return (
-              <div key={`block-${idx}`} className="w-full bg-white relative block">
+              <div key={`block-${idx}`} className={`w-full bg-white relative block ${idx === 1 ? 'pt-6 md:pt-10' : ''}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={block.src}
