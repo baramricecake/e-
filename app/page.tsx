@@ -33,7 +33,7 @@ const ReusableContactForm = () => (
           name="name"
           required
           style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#FB6719] focus:border-[#FB6719] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -47,7 +47,7 @@ const ReusableContactForm = () => (
           name="phone"
           required
           style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#FB6719] focus:border-[#FB6719] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -60,7 +60,7 @@ const ReusableContactForm = () => (
           id="date"
           name="date"
           style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#FB6719] focus:border-[#FB6719] outline-none text-base transition-shadow"
         />
       </div>
 
@@ -72,7 +72,7 @@ const ReusableContactForm = () => (
           id="time"
           name="time"
           style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow"
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#FB6719] focus:border-[#FB6719] outline-none text-base transition-shadow"
         >
           <option value="">시간 선택</option>
           <option value="10:00~11:00">10:00~11:00</option>
@@ -95,7 +95,7 @@ const ReusableContactForm = () => (
           id="message"
           name="message"
           style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#2C3B46] focus:border-[#2C3B46] outline-none text-base transition-shadow placeholder-gray-400"
+          className="w-full px-4 py-3 bg-white text-black font-extrabold rounded-md border border-gray-300 focus:ring-2 focus:ring-[#FB6719] focus:border-[#FB6719] outline-none text-base transition-shadow placeholder-gray-400"
           placeholder="ex.회사보유분 로얄층 문의, 분양가"
         />
       </div>
@@ -147,7 +147,7 @@ const ReusableContactForm = () => (
     <div className="pt-4">
       <button
         type="submit"
-        className="w-full flex justify-center py-4 px-4 font-bold text-white bg-[#2C3B46] hover:bg-[#1a2329] transition transform hover:-translate-y-1 shadow-md rounded-md text-lg"
+        className="w-full flex justify-center py-4 px-4 font-bold text-white bg-[#1E2F3F] hover:bg-[#FB6719] transition transform hover:-translate-y-1 shadow-md rounded-md text-lg"
       >
         제출하기
       </button>
@@ -233,27 +233,19 @@ export default function Home() {
       <div className="w-full bg-white shadow-md flex justify-center sticky top-0 z-50 transition-all duration-300">
         <div className="w-full max-w-6xl px-4 py-4 md:py-5 flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="flex items-end font-[family-name:var(--font-geist-sans)]" style={{ marginTop: '2px' }}>
-              <span className="text-[22px] md:text-[25px] font-[900] tracking-[-0.08em] text-[#3b4754] leading-none block">
-                e편한세상 서울산
-              </span>
-              <div className="ml-1.5 border-t-[2.5px] border-l-[2.5px] border-r-[2.5px] border-[#78a2b8] px-[7px] pt-[3px] pb-0 flex items-center" style={{ transform: 'translateY(1px)' }}>
-                <span className="text-[22px] md:text-[25px] font-[900] tracking-[-0.07em] text-[#3b4754] leading-none block">
-                  파크그란데
-                </span>
-              </div>
-            </h1>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo_1.png" alt="e편한세상 서울산 파크그란데 로고" className="h-8 md:h-10 w-auto" />
           </div>
-          <a href="tel:010-8129-4477" className="hidden border border-[#2C3B46] px-3 md:px-4 py-1.5 text-[#2C3B46] text-sm md:flex items-center gap-1.5 hover:bg-[#2C3B46] hover:text-white transition rounded-sm font-bold">
+          <a href="tel:010-8129-4477" className="hidden border border-[#1E2F3F] px-3 md:px-4 py-1.5 text-[#1E2F3F] text-sm md:flex items-center gap-1.5 hover:bg-[#1E2F3F] hover:text-[#FB6719] transition rounded-sm font-bold">
             <Phone className="w-4 h-4" />
             분양 상담
           </a>
         </div>
       </div>
 
-      <div className="w-full relative overflow-hidden bg-gradient-to-r from-[#1a2329] via-[#2C3B46] to-[#1a2329] text-white flex items-center justify-center py-3.5 text-sm md:text-base font-extrabold tracking-widest z-40 shadow-inner group cursor-pointer hover:via-[#3b4b59] transition-colors duration-500">
+      <div className="w-full relative overflow-hidden bg-gradient-to-r from-[#1E2F3F] via-[#2A435A] to-[#1E2F3F] text-white flex items-center justify-center py-3.5 text-sm md:text-base font-extrabold tracking-widest z-40 shadow-inner group cursor-pointer hover:via-[#3C5771] transition-colors duration-500">
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-[100%] animate-shimmer"></div>
-        <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse mr-2.5 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+        <span className="w-2.5 h-2.5 rounded-full bg-[#FB6719] animate-pulse mr-2.5 shadow-[0_0_8px_rgba(251,103,25,0.8)]"></span>
         <span className="tracking-[0.2em] drop-shadow-md">선착순 동·호 지정 계약 중 !</span>
       </div>
 
@@ -270,20 +262,20 @@ export default function Home() {
               return (
                 <div key={`block-${idx}`} id={block.id} className="py-16 md:py-24 px-6 md:px-10 bg-white w-full border-t flex flex-col items-center">
                   <div className="text-center mb-12 w-full flex flex-col items-center">
-                    <div className="w-12 h-1 bg-[#2C3B46] mb-8 rounded-full"></div>
+                    <div className="w-12 h-1 bg-[#FB6719] mb-8 rounded-full"></div>
 
-                    <h2 className="text-3xl md:text-4xl font-light mb-4 tracking-tighter text-[#2C3B46] animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                      e편한세상 서울산 <span className="font-bold border border-[#2C3B46] px-2 py-1 ml-1 text-2xl md:text-3xl">파크그란데</span>
+                    <h2 className="text-3xl md:text-4xl font-light mb-4 tracking-tighter text-[#1E2F3F] animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                      e편한세상 서울산 <span className="font-bold border border-[#1E2F3F] px-2 py-1 ml-1 text-2xl md:text-3xl">파크그란데</span>
                     </h2>
 
                     <div className="w-full flex justify-center mt-2">
-                      <p className="inline-block text-[#2C3B46] bg-gray-50 border border-gray-200 font-bold text-lg md:text-xl tracking-tight px-6 py-2 rounded-full shadow-sm">
+                      <p className="inline-block text-[#1E2F3F] bg-gray-50 border border-gray-200 font-bold text-lg md:text-xl tracking-tight px-6 py-2 rounded-full shadow-sm">
                         방문예약 및 VIP 고객등록
                       </p>
                     </div>
 
-                    <div className="mt-8 bg-[#2C3B46] text-white px-8 py-3 rounded-md shadow-[0_4px_14px_0_rgba(44,59,70,0.39)] flex flex-col items-center justify-center transform transition duration-500 hover:scale-105 hover:bg-[#1e2830]">
-                      <span className="text-[10px] md:text-xs text-white/70 mb-1 tracking-[0.2em] font-medium">PREMIUM</span>
+                    <div className="mt-8 bg-[#1E2F3F] text-white px-8 py-3 rounded-md shadow-[0_4px_14px_0_rgba(30,47,63,0.39)] flex flex-col items-center justify-center transform transition duration-500 hover:scale-105 hover:bg-[#121c25]">
+                      <span className="text-[10px] md:text-xs text-[#FB6719] mb-1 tracking-[0.2em] font-bold">PREMIUM</span>
                       <span className="font-extrabold text-lg md:text-xl tracking-wider">
                         선착순 동·호지정 계약중
                       </span>
@@ -300,20 +292,19 @@ export default function Home() {
             // 메인 히어로 섹션 (인터랙션 및 디자인 추가)
             if (block.type === 'hero') {
               return (
-                <div key={`block-${idx}`} className="w-full relative overflow-hidden bg-black flex flex-col items-center justify-center min-h-[60vh] md:min-h-[80vh]">
-                  {/* 배경 이미지 애니메이션 효과 (서서히 줌인) */}
-                  <div className="absolute inset-0 z-0 overflow-hidden">
-                    <img src={block.src} alt="e편한세상 서울산 파크그란데 메인 뷰" className="w-full h-full object-cover opacity-60" style={{ transformOrigin: 'center center', animation: 'slowZoom 20s infinite alternate ease-in-out' }} />
+                <div key={`block-${idx}`} className="w-full relative overflow-hidden bg-[#1E2F3F] flex flex-col items-center justify-center aspect-auto">
+                  {/* 사진 잘림 방지를 위한 전체 비율 노출 (min-h 제거 및 height auto) */}
+                  <div className="w-full relative z-0 flex items-center justify-center">
+                    <img src={block.src} alt="e편한세상 서울산 파크그란데 메인 뷰" className="w-full h-auto block opacity-95" />
                   </div>
 
-                  {/* 그라데이션 오버레이 (위/아래 어둡게) */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-10 pointer-events-none"></div>
+                  {/* 그라데이션 오버레이 (하단 텍스트 안정감을 위해) */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#1a2329] to-transparent z-10 pointer-events-none"></div>
 
-                  {/* 텍스트는 이미지 자체에 있으므로 기존 타이포그래피 태그는 삭제, 배경 인터랙션 유지 */}
                   {/* 마우스 스크롤 유도 애니메이션 */}
-                  <div className="absolute bottom-10 md:bottom-16 z-20 flex flex-col items-center opacity-80 animate-in fade-in duration-1000 delay-1000 fill-mode-both">
-                    <span className="text-white/70 text-[10px] md:text-xs mb-2 tracking-widest uppercase font-mono animate-pulse">Scroll Down</span>
-                    <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
+                  <div className="absolute bottom-8 md:bottom-12 z-20 flex flex-col items-center opacity-90 animate-in fade-in duration-1000 delay-1000 fill-mode-both">
+                    <span className="text-white/80 text-[10px] md:text-xs mb-2 tracking-widest uppercase font-mono animate-pulse drop-shadow-md">Scroll Down</span>
+                    <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center p-1 shadow-sm">
                       <div className="w-1.5 h-2.5 bg-white rounded-full animate-bounce mt-1"></div>
                     </div>
                   </div>
@@ -325,18 +316,18 @@ export default function Home() {
             if (block.type === 'custom-banner') {
               return (
                 <div key={`block-${idx}`} className="w-full px-6 py-12 md:py-16 bg-[#f8f9fa] flex justify-center border-y border-gray-200">
-                  <a href="tel:010-8129-4477" className="block w-full max-w-[500px] relative overflow-hidden rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#2C3B46] text-white hover:scale-105 transition-transform duration-300 group">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-110 transition-transform"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full transform -translate-x-8 translate-y-8"></div>
+                  <a href="tel:010-8129-4477" className="block w-full max-w-[500px] relative overflow-hidden rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#1E2F3F] text-white hover:scale-105 transition-transform duration-300 group">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FB6719]/10 rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-110 transition-transform"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#FB6719]/10 rounded-full transform -translate-x-8 translate-y-8"></div>
 
                     <div className="relative p-6 md:p-8 flex flex-col items-center text-center">
-                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-medium tracking-widest text-white/90 mb-4">
+                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-medium tracking-widest text-[#FB6719] mb-4">
                         PREMIUM APARTMENT
                       </span>
                       <h3 className="text-xl md:text-2xl font-light mb-1">e편한세상 서울산 <span className="font-bold">파크그란데</span></h3>
                       <p className="text-lg font-medium text-white/80 mb-6 tracking-wide">로얄층 특별 분양 상담</p>
 
-                      <div className="flex items-center justify-center gap-2 bg-white text-[#2C3B46] px-6 py-3 rounded-full font-bold shadow-md group-hover:bg-gray-50 transition-colors">
+                      <div className="flex items-center justify-center gap-2 bg-[#FB6719] text-white px-6 py-3 rounded-full font-bold shadow-md group-hover:bg-[#e05410] transition-colors">
                         <Phone className="w-4 h-4" />
                         빠른 상담 연결
                         <ArrowRight className="w-4 h-4 ml-1 opacity-70 group-hover:translate-x-1 transition-transform" />
@@ -385,11 +376,9 @@ export default function Home() {
               </span>
             </div>
             <div className="flex items-center">
-              <span className="text-[#a1a1aa] mr-2 text-[12px] md:text-[14px]">시공</span>
-              <span className="text-white font-[900] tracking-tight flex items-center text-[15px] md:text-lg font-sans">
-                <span className="text-[14px] md:text-[16px] mr-1.5 leading-none inline-block font-sans text-white/90 transform scale-125" style={{ transform: 'translateY(-1px) scale(1.1)' }}>❖</span>
-                DL건설
-              </span>
+              <span className="text-[#a1a1aa] mr-3 text-[12px] md:text-[14px]">시공</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/dl_logo.png" alt="DL건설 로고" className="h-6 md:h-8 w-auto mix-blend-screen opacity-90" />
             </div>
           </div>
         </div>
@@ -415,14 +404,14 @@ export default function Home() {
         <div className="w-full max-w-[768px] flex pointer-events-auto bg-white shadow-[0_-5px_20px_rgba(0,0,0,0.15)] h-[60px] md:h-[70px]">
           <a
             href="tel:010-8129-4477"
-            className="flex-1 bg-white text-[#2C3B46] flex items-center justify-center font-bold text-lg md:text-xl active:bg-gray-50 transition border-r border-gray-200"
+            className="flex-1 bg-white text-[#1E2F3F] flex items-center justify-center font-bold text-lg md:text-xl active:bg-gray-50 transition border-r border-[#1E2F3F]/10"
           >
             <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             분양 상담
           </a>
           <a
             href="#contact-bottom"
-            className="flex-1 bg-[#2C3B46] text-white flex items-center justify-center font-bold text-lg md:text-xl active:bg-[#1a2329] transition"
+            className="flex-1 bg-[#FB6719] text-white flex items-center justify-center font-bold text-lg md:text-xl active:bg-[#e05410] transition"
           >
             잔여세대 상담
           </a>
