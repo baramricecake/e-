@@ -6,11 +6,12 @@ const pageBlocks = [
   { type: 'hero', src: "/1.png" },
   { type: 'image', src: "/2.png" },
   { type: 'image', src: "/3.webp" },
+  { type: 'form', id: "contact-mid" },
   { type: 'custom-banner' },
   { type: 'image', src: "/4.png" },
   { type: 'image', src: "/5.png" },
   { type: 'image', src: "/6.png" },
-  { type: 'form', id: "contact-mid" },
+  { type: 'image', src: "/dev_plan.jpg" },
   { type: 'image', src: "/7.png" },
   { type: 'image', src: "/8.png" },
   { type: 'image', src: "/9.png" },
@@ -292,22 +293,30 @@ export default function Home() {
             // 메인 히어로 섹션 (인터랙션 및 디자인 추가)
             if (block.type === 'hero') {
               return (
-                <div key={`block-${idx}`} className="w-full relative overflow-hidden bg-[#1E2F3F] flex flex-col items-center justify-center aspect-auto">
-                  {/* 사진 잘림 방지를 위한 전체 비율 노출 (min-h 제거 및 height auto) */}
-                  <div className="w-full relative z-0 flex items-center justify-center">
-                    <img src={block.src} alt="e편한세상 서울산 파크그란데 메인 뷰" className="w-full h-auto block opacity-95" />
+                <div key={`block-${idx}`} className="w-full relative overflow-hidden bg-[#1E2F3F] flex flex-col items-center justify-center min-h-[85vh] md:min-h-screen">
+                  {/* 사진 가득 채우기 & 고급스러운 스케일 애니메이션 (화면 확장감) */}
+                  <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+                    <img src={block.src} alt="e편한세상 서울산 파크그란데 메인 뷰" className="w-full h-full object-cover opacity-90" style={{ transformOrigin: 'center top', animation: 'slowZoom 20s infinite alternate ease-in-out' }} />
                   </div>
 
-                  {/* 그라데이션 오버레이 (하단 텍스트 안정감을 위해) */}
-                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#1a2329] to-transparent z-10 pointer-events-none"></div>
+                  {/* 그라데이션 오버레이 (위/아래 텍스트 안정감을 위해) */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#1E2F3F]/30 via-transparent to-[#1a2329]/90 z-10 pointer-events-none"></div>
 
                   {/* 마우스 스크롤 유도 애니메이션 */}
-                  <div className="absolute bottom-8 md:bottom-12 z-20 flex flex-col items-center opacity-90 animate-in fade-in duration-1000 delay-1000 fill-mode-both">
+                  <div className="absolute bottom-10 md:bottom-16 z-20 flex flex-col items-center opacity-90 animate-in fade-in duration-1000 delay-1000 fill-mode-both">
                     <span className="text-white/80 text-[10px] md:text-xs mb-2 tracking-widest uppercase font-mono animate-pulse drop-shadow-md">Scroll Down</span>
                     <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center p-1 shadow-sm">
                       <div className="w-1.5 h-2.5 bg-white rounded-full animate-bounce mt-1"></div>
                     </div>
                   </div>
+
+                  {/* 키프레임 스타일 추가 */}
+                  <style jsx>{`
+                    @keyframes slowZoom {
+                      0% { transform: scale(1); }
+                      100% { transform: scale(1.1); }
+                    }
+                  `}</style>
                 </div>
               );
             }
